@@ -13,21 +13,6 @@
 
 ## Hình Ảnh Của Trò Chơi
 
-### Bảng 1: Giao diện chính
-
-| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
-| --- |
-| **Giao diện chính của game** |
-
-### Bảng 2: Chướng ngại vật
-
-| ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
-| --- |
-| **Chướng ngại vật trong game** |
-
-### Bảng 3: Hệ thống điểm số
-
-| ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
-| --- |
-| **Hệ thống điểm số khi chơi** |
-
+| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
+| --- | --- | --- |
+| **Giao diện chính của game** | **Chướng ngại vật trong game** | **Hệ thống điểm số khi chơi** |
