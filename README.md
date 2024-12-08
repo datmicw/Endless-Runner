@@ -15,18 +15,16 @@
 ## Key Features
 
 1. **Dynamic Gameplay**:
-- The player controls a character running on an endless path, with obstacles appearing randomly along the way.
-
-- The speed increases over time, making the game more challenging.
+   - The player controls a character running on an endless path, with obstacles appearing randomly along the way.
+   - The speed increases over time, making the game more challenging.
 
 2. **Stunning 3D Graphics**:
-- Realistic 3D environments created with the Unity Engine.
-- Randomly generated maps that change every time you play.
+   - Realistic 3D environments created with the Unity Engine.
+   - Randomly generated maps that change every time you play.
 
 3. **Obstacle and Points System**:
-- Avoid obstacles and collect points to increase your score.
-
-- The game tracks your survival time, offering competitive challenges to beat your own score.
+   - Avoid obstacles and collect points to increase your score.
+   - The game tracks your survival time, offering competitive challenges to beat your own score.
 
 ---
 
@@ -39,22 +37,21 @@
 
 **Player Controls**:
 - Responsive controls for running, jumping, and avoiding obstacles.
-
 - Powers and upgrades become available as you progress.
 
 ---
 
 ## Visual Preview
+## Game Images
+
+| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
+| --- | --- | --- |
+| **Main game interface** | **Obstacles in the game** | **Score system while playing** |
+---
 
 ## Install and Play
 
 1. **Download**:
-- Clone the repository:
-```bash
-git clone https://github.com/datmicw/endless-runner.git
-
-## Hình Ảnh Của Trò Chơi
-
-| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
-| --- | --- | --- |
-| **Giao diện chính của game** | **Chướng ngại vật trong game** | **Hệ thống điểm số khi chơi** |
+   - Clone the repository:
+   ```bash
+   git clone https://github.com/datmicw/endless-runner.git
