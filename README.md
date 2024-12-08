@@ -46,12 +46,6 @@
 
 ## Visual Preview
 
-### First Image
-**Game with Obstacles**
-![image](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82)
-
----
-
 ## Install and Play
 
 1. **Download**:
@@ -59,8 +53,8 @@
 ```bash
 git clone https://github.com/datmicw/endless-runner.git
 
-## Game Image
+## Hình Ảnh Của Trò Chơi
 
-| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Point System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
+| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
 | --- | --- | --- |
-| **Game Main Interface** | **Menu** | **Other** |
+| **Giao diện chính của game** | **Chướng ngại vật trong game** | **Hệ thống điểm số khi chơi** |
