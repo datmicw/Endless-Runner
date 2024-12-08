@@ -6,7 +6,7 @@
 
 - **Development Date**: December 9, 2024
 - **Genre**: Action / Endless Runner
-- **Platform**: Windows / Android / iOS
+- **Platform**: Windows / Android / Web
 - **Engine**: Unity
 - **Objective**: Run, avoid obstacles and survive as long as possible.
 
