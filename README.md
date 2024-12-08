@@ -1,18 +1,66 @@
-# Endless-Runner
+# Endless Runner
 
+"Endless Runner" is a fast-paced 3D game in which the player controls a character running through endless terrain, avoiding obstacles and collecting points along the way. The game challenges the player to react quickly and think strategically to avoid danger and achieve the highest score.
+
+## Game Overview
+
+- **Development Date**: December 9, 2024
+- **Genre**: Action / Endless Runner
+- **Platform**: Windows / Android / iOS
+- **Engine**: Unity
+- **Objective**: Run, avoid obstacles and survive as long as possible.
+
+---
+
+## Key Features
+
+1. **Dynamic Gameplay**:
+- The player controls a character running on an endless path, with obstacles appearing randomly along the way.
+
+- The speed increases over time, making the game more challenging.
+
+2. **Stunning 3D Graphics**:
+- Realistic 3D environments created with the Unity Engine.
+- Randomly generated maps that change every time you play.
+
+3. **Obstacle and Points System**:
+- Avoid obstacles and collect points to increase your score.
+
+- The game tracks your survival time, offering competitive challenges to beat your own score.
+
+---
+
+## Development
+
+### Technologies Used:
+- **Game Engine**: Unity
+- **Programming Language**: C#
+- **Assets**: Custom 3D models, animations, textures, and sound effects.
+
+**Player Controls**:
+- Responsive controls for running, jumping, and avoiding obstacles.
+
+- Powers and upgrades become available as you progress.
+
+---
+
+## Visual Preview
+
+### First Image
+**Game with Obstacles**
 ![image](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82)
 
-## Mô tả Game
+---
 
-**Endless Runner** là một trò chơi chạy không ngừng trong môi trường 3D, nơi người chơi điều khiển một nhân vật chạy qua các chướng ngại vật và thu thập điểm. Mục tiêu của người chơi là tránh các vật cản, duy trì tốc độ và không bị va chạm để đạt được số điểm cao nhất có thể. Trò chơi sẽ ngày càng trở nên khó khăn hơn khi nhân vật chạy nhanh hơn và các chướng ngại vật xuất hiện dày đặc hơn.
+## Install and Play
 
-## Các Tính Năng Chính:
-- **Môi trường 3D:** Mỗi lần chơi sẽ trải qua các địa hình và chướng ngại vật ngẫu nhiên.
-- **Hệ thống điểm số:** Người chơi thu được điểm mỗi khi tránh được vật cản.
-- **Điều khiển mượt mà:** Cảm giác điều khiển mượt mà và dễ dàng giúp người chơi dễ dàng tham gia và duy trì hứng thú.
+1. **Download**:
+- Clone the repository:
+```bash
+git clone https://github.com/datmicw/endless-runner.git
 
-## Hình Ảnh Của Trò Chơi
+## Game Image
 
-| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
+| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Point System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
 | --- | --- | --- |
-| **Giao diện chính của game** | **Chướng ngại vật trong game** | **Hệ thống điểm số khi chơi** |
+| **Game Main Interface** | **Menu** | **Other** |
