@@ -99,10 +99,3 @@
 
 
 ---
-
-## Install and Play
-
-1. **Download**:
-   - Clone the repository:
-   ```bash
-   git clone https://github.com/datmicw/endless-runner.git
