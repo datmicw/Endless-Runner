@@ -7,30 +7,23 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 200f;
-    private Rigidbody _rb;
+    public float force = 200f;
 
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-    }
-
-    private void Movement()
-    {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Nếu nhấn phím D hoặc phím mũi tên phải
-        {
-            _rb.AddForce(speed * Time.deltaTime, 0, 0, ForceMode.VelocityChange); // Thêm lực tác động lên trục X
-        }
-
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Nếu nhấn phím A hoặc phím mũi tên trái
-        {
-            _rb.AddForce(- speed * Time.deltaTime, 0, 0, ForceMode.VelocityChange); // Thêm lực tác động lên trục X
-        }
-        
-    }
     private void FixedUpdate()
     {
-        Movement();
-        
+        Rigidbody player;
+
+        player = GetComponent<Rigidbody>();
+
+        // Move player on the Z axis (sideways)
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            player.AddForce(force * Time.deltaTime, 0f, 0f, ForceMode.VelocityChange);
+        }
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            player.AddForce(-force * Time.deltaTime, 0f, 0f, ForceMode.VelocityChange);
+        }
     }
 }
