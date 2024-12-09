@@ -40,13 +40,13 @@
 - Powers and upgrades become available as you progress.
 
 ---
-
 ## Visual Preview
 ## Game Images
 
-| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles]([https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82](https://github.com/user-attachments/assets/abbb91f5-bd3d-48ad-8908-61f7d2b4db80)) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
+| ![Game Interface](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) | ![Obstacles](https://github.com/user-attachments/assets/abbb91f5-bd3d-48ad-8908-61f7d2b4db80) | ![Score System](https://github.com/user-attachments/assets/c7cf2a50-57ab-4454-86c3-88d5e47c6d82) |
 | --- | --- | --- |
-| **Main game interface** | **Obstacles in the game** | **Score system while playing** |
+| **Main game** | **Menu** | **Score system while playing** |
+
 ---
 
 ## Install and Play
