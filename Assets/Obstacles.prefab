@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retryPanel: {fileID: 0}
-  speed: 10
+  speed: 20
   collisionVelocity: {x: 25, y: 5, z: 10}

@@ -18,12 +18,9 @@ public class MainManager : MonoBehaviour
 
     private void Spawn()
     {
-        int i;
-        // Tạo ngẫu nhiên 2 vật cản trên trục X trong phạm vi [-10, 10]
-        for (i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
-            // Tạo một vị trí ngẫu nhiên cho vật cản trên trục X trong phạm vi [-10, 10]
-            var randomX = Random.Range(-10f, 10f);
+            var randomX = Random.Range(-9.5f, 9.5f);
 
             // Tạo vật cản tại vị trí ngẫu nhiên trên trục X và trục Z
             Instantiate(obstaclePrefab, new Vector3(randomX, 3, obstacleStartX), Quaternion.identity, obstacles);
@@ -46,7 +43,7 @@ public class MainManager : MonoBehaviour
     }
     private void Start()
     {
-        InvokeRepeating("IncreaseScore", 1f, 1f); // Gọi IncreaseScore mỗi giây
+        InvokeRepeating("IncreaseScore", 0.1f, 1f); // Gọi IncreaseScore mỗi 0.1 giây
         // Gọi Spawn mỗi khoảng thời gian được xác định
         InvokeRepeating("Spawn", 1f, spawnInterval);
     }

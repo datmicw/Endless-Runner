@@ -8,7 +8,7 @@ public class ObstacleMovement : MonoBehaviour
     private MainMenu gameManager; // Tham chiếu đến MainMen
 
     public GameObject retryPanel; // UI Retry
-    public float speed = 200f; // Tốc độ di chuyển
+    public float speed = 20f; // Tốc độ di chuyển
     public Vector3 collisionVelocity = new Vector3(25f, 5f, 10f); // Tốc độ khi va chạm
 
     private void Start()
