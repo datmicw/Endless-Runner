@@ -5,75 +5,84 @@ using System.Collections;
 
 public class ObstacleMovement : MonoBehaviour
 {
-    private MainMenu gameManager; // Tham chiếu đến MainMen
+    private MainMenu mainMenu;
+    private MainManager mainManager;
 
-    public GameObject retryPanel; // UI Retry
-    public float speed = 20f; // Tốc độ di chuyển
-    public Vector3 collisionVelocity = new Vector3(25f, 5f, 10f); // Tốc độ khi va chạm
+    public GameObject retryPanel;
+    public float speed = 20f;
+    public Vector3 collisionVelocity = new Vector3(25f, 5f, 10f);
+    public GameObject textScore;
+    public int finalScore;
 
     private void Start()
     {
-        // Tìm MainMenu trong scene
-        gameManager = FindObjectOfType<MainMenu>();
+        mainMenu = FindObjectOfType<MainMenu>();
+        mainManager = FindObjectOfType<MainManager>();
+
         if (retryPanel)
         {
-            retryPanel.SetActive(false); // Ẩn retry panel khi bắt đầu game
+            retryPanel.SetActive(false);
+        }
+        if (GameData.Instance != null)
+        {
+            speed = GameData.Instance.mapSpeed;
+            Debug.Log("Map Speed được gán từ GameData: " + speed);
+        }
+        else
+        {
+            Debug.LogError("GameData không tồn tại!");
         }
     }
 
-    // Hàm để hiển thị UI Retry
     public void ShowRetryUI()
     {
-        retryPanel.SetActive(true); // Hiển thị UI Retry
+        retryPanel.SetActive(true);
     }
 
-    // Hàm để chơi lại game khi nhấn nút Retry
     public void RetryGame()
     {
         // Tải lại scene hiện tại (chơi lại game)
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Xử lý va chạm
     public void OnCollisionEnter(Collision other)
     {
         switch (other.gameObject.tag)
         {
             case "Player":
-                // Khi va chạm với player, vật cản sẽ bị đẩy lên và quay
                 Rigidbody obstacles = GetComponent<Rigidbody>();
                 obstacles.velocity = new Vector3(obstacles.velocity.x, collisionVelocity.y, collisionVelocity.z);
                 obstacles.angularVelocity = obstacles.velocity * collisionVelocity.x;
 
-                // Hiển thị retryPanel khi va chạm với player
-                if (gameManager)
+                if (mainMenu)
                 {
-                    StartCoroutine(ShowRetryAfterDelay(1f));
+                    mainManager.CancelScoreUpdate();
+                    finalScore = mainManager.score;
+                    StartCoroutine(ShowRetryAfterDelay(2f));
                 }
 
                 Debug.Log("Game Over");
                 break;
 
             case "Obstacle":
-                // Va chạm với vật cản khác, vật cản sẽ bị đẩy lui
                 other.gameObject.GetComponent<Rigidbody>().velocity = collisionVelocity;
                 break;
 
             case "Destroy":
-                // Xóa vật cản nếu va chạm với đối tượng có tag "Destroy"
                 Destroy(gameObject);
                 break;
         }
     }
 
-    // Coroutine để trì hoãn việc hiển thị UI retry sau 3 giây
     private IEnumerator ShowRetryAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); // Đợi trong khoảng thời gian đã chỉ định
-        gameManager.ShowRetryUI(); // Hiển thị UI Retry
+        yield return new WaitForSeconds(delay);
+
+        mainMenu.ShowRetryUI();
+
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Di chuyển vật thể liên tục theo trục Z
         GetComponent<Rigidbody>().AddForce(0f, 0f, -speed);
