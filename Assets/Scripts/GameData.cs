@@ -25,15 +25,16 @@ public class GameData : MonoBehaviour
     }
     public void SaveGameData()
     {
-        string json = JsonUtility.ToJson(this); // chuyển thành chuổi JSON để lưu data game in local server
-        File.WriteAllText(filePath, json); // Lưu vào file
-        Debug.Log("Game data saved to: " + filePath); //Debug.Log(
+        string json = JsonUtility.ToJson(this);
+        File.WriteAllText(filePath, json);
+        Debug.Log("Game data saved to: " + filePath);
     }
     public void LoadGameData()
     {
-        if(File.Exists(filePath)){
+        if (File.Exists(filePath))
+        {
             string json = File.ReadAllText(filePath);
-            JsonUtility.FromJsonOverwrite(json, this); 
+            JsonUtility.FromJsonOverwrite(json, this);
             Debug.Log("Game data loaded.");
         }
     }

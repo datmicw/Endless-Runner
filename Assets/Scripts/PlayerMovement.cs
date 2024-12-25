@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float force = 200f; 
+    public float force = 200f;
 
     private void Start()
     {

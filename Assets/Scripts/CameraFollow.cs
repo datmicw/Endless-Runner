@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (player != null) // kiem tra player co ton tai khong
         {
-            Vector3 desiredPosition = CalculateDesiredPosition(); 
+            Vector3 desiredPosition = CalculateDesiredPosition();
             SmoothMoveToPlayer(desiredPosition); // Di chuyen camera den vi tri mong muon
         }
     }

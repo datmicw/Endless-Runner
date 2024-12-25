@@ -35,7 +35,7 @@ public class MainManager : MonoBehaviour
     private void IncreaseScore()
     {
         score += 1;
-        UpdateScoreText(); 
+        UpdateScoreText();
     }
     private void Start()
     {

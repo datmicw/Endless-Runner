@@ -10,24 +10,19 @@ public class MainMenu : MonoBehaviour
     public GameObject panelAbout;
     public GameObject panelOption;
     public GameObject retryPanel;
+    public GameObject confirmPanel;
     public Text finalScore;
     public Slider forceSlider;
     public Slider mapSpeedSlider;
 
     private void Start()
     {
-        GameData.Instance.SaveGameData();
-        Debug.Log(GameData.Instance.playerName);
-        GameData.Instance.LoadGameData();
-        forceSlider.value = GameData.Instance.force;
-        mapSpeedSlider.value = GameData.Instance.mapSpeed;
-        if (retryPanel) retryPanel.SetActive(false);
-
-        if (panelOption) panelOption.SetActive(false);
-
-        if (panelAbout) panelAbout.SetActive(false);
         if (GameData.Instance != null)
         {
+            GameData.Instance.SaveGameData();
+            Debug.Log(GameData.Instance.playerName);
+            GameData.Instance.LoadGameData();
+
             if (forceSlider != null)
             {
                 forceSlider.value = GameData.Instance.force;
@@ -43,47 +38,65 @@ public class MainMenu : MonoBehaviour
         else
         {
             Debug.LogError("GameData không tồn tại! Kiểm tra xem GameData đã được thêm vào Scene chưa.");
-
         }
+
+        if (retryPanel) retryPanel.SetActive(false);
+        if (panelOption) panelOption.SetActive(false);
+        if (confirmPanel) confirmPanel.SetActive(false);
+        if (panelAbout) panelAbout.SetActive(false);
     }
+
     public void OnOpenAboutButtonClick()
     {
         panelAbout.SetActive(true);
     }
+
     public void OnCloseAboutButtonClick()
     {
         panelAbout.SetActive(false);
-
     }
+
+    public void OnOpenConfirmPanel()
+    {
+        confirmPanel.SetActive(true);
+    }
+
+    public void OnCloseConfirmPanel()
+    {
+        confirmPanel.SetActive(false);
+    }
+
     public void OnOpenOptionButtonClick()
     {
         panelOption.SetActive(true);
     }
+
     public void OnCloseOptionButtonClick()
     {
         panelOption.SetActive(false);
     }
-    // Khi người chơi nhấn nút Play, tải scene Main
+
     public void OnPlayerButtonClick()
     {
         SceneManager.LoadScene("Main");
     }
-    // Khi người chơi nhấn nút Exit, thoát ứng dụng
+
     public void OnExitToMenuButton()
     {
         SceneManager.LoadScene("Menu");
     }
+
     public void ExitGame()
     {
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
+
     public void ShowRetryUI()
     {
-        // xem gameManager và finalScore có được gán đúng không
         if (gameManager == null)
         {
             Debug.LogError("gameManager is not assigned!");
@@ -107,6 +120,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
     public void UpdateForce(float value)
     {
         if (GameData.Instance != null)
@@ -132,5 +146,4 @@ public class MainMenu : MonoBehaviour
             Debug.LogError("GameData không tồn tại!");
         }
     }
-
 }

@@ -58,7 +58,7 @@ public class ObstacleMovement : MonoBehaviour
                 {
                     mainManager.CancelScoreUpdate();
                     finalScore = mainManager.score;
-                    StartCoroutine(ShowRetryAfterDelay(2f));
+                    StartCoroutine(ShowRetryAfterDelay(1.5f));
                 }
 
                 Debug.Log("Game Over");
